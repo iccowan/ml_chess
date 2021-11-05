@@ -1,2 +1,5 @@
+#!/bin/bash
+# Setup for Ubuntu machines (all others install stockfish as appropriate)
+
 pip install -r $PWD/requirements.txt
 sudo apt install stockfish
