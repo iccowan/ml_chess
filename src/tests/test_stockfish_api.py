@@ -1,16 +1,41 @@
-import ml_chess
+import stockfish
+from ml_chess import stockfish_api
+from stockfish import Stockfish
 
 # TODO
 def test_get_best_move():
     assert True
 
-# TODO
+'''
+Test that a move is made when we want it to be
+'''
 def test_make_move():
-    assert True
+    stockfish_api.make_move('e2e3')
 
-# TODO
-def test_get_fish():
-    assert True
+    assert stockfish_api.get_board() == 'rnbqkbnr/pppppppp/8/8/8/4P3/PPPP1PPP/RNBQKBNR b KQkq - 0 1'
+
+    stockfish_api.set_board('r3kbnr/p1pb1p1p/4q1p1/2ppP1Q1/8/2N1P3/PPP1NPPP/R1B2RK1 b kq - 1 10')
+    stockfish_api.make_move('g8e7')
+
+    assert stockfish_api.get_board() == 'r3kb1r/p1pbnp1p/4q1p1/2ppP1Q1/8/2N1P3/PPP1NPPP/R1B2RK1 w kq - 2 11'
+
+'''
+Test that there is really only one fish instance
+being created
+'''
+def test_get_fish_singleton():
+    fish1 = stockfish_api.get_fish()
+    fish2 = stockfish_api.get_fish()
+
+    assert fish1 == fish2
+
+''' 
+Test that the fish is an instance of Stockfish
+'''
+def test_get_fish_is_stockfish():
+    fish = stockfish_api.get_fish()
+    
+    assert isinstance(fish, Stockfish)
 
 # TODO
 def test_get_board():

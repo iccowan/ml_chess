@@ -13,3 +13,6 @@ def get_fish():
 
 def get_board():
     return fish.get_fen_position()
+
+def set_board(position):
+    fish.set_fen_position(position)
