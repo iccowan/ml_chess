@@ -1,1 +1,2 @@
 pip install -r $PWD/requirements.txt
+sudo apt install stockfish
