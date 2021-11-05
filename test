@@ -1,0 +1,8 @@
+#!/bin/bash
+
+. $PWD/.venv/bin/activate
+python3 scripts/get-pip.py
+cd $PWD/src/tests
+pytest --verbose
+exit $?
+cd ../..
