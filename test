@@ -1,6 +1,6 @@
 #!/bin/bash
 
 cd $PWD/src/tests
-pytest
+pytest --verbose
 exit $?
 cd ../..
