@@ -1,5 +1,6 @@
 #!/bin/bash
 
+. $PWD/.venv/bin/activate
 cd $PWD/src/tests
 pytest --verbose
 exit $?

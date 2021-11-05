@@ -3,6 +3,6 @@
 
 sudo apt install virtualenv
 sudo apt install stockfish
-virtualenv .venv
+virtualenv -p $1 .venv
 . $PWD/.venv/bin/activate
 pip install -r $PWD/requirements.txt

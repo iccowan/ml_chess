@@ -14,6 +14,6 @@ jobs:
             - name: install dependencies
               run: |
                   python -m pip install --upgrade pip
-                  sudo ./setup
+                  sudo ./setup ${{ env.pythonLocation }}
             - name: run tests
               run: ./test
