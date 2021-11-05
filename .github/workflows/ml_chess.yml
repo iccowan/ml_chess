@@ -16,4 +16,4 @@ jobs:
                   python -m pip install --upgrade pip
                   ./setup
             - name: run tests
-              run: cd tests && pytest
+              run: ./test
