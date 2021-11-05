@@ -4,6 +4,6 @@
 sudo apt install virtualenv
 sudo apt install stockfish
 virtualenv -p $1 .venv
-$PWD/.venv/bin/activate
-python3 -m pip install --upgrade pip
+. $PWD/.venv/bin/activate
+python3 scripts/get-pip.py
 pip install -r $PWD/requirements.txt
