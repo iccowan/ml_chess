@@ -2,5 +2,5 @@
 
 cd $PWD/src/tests
 pytest
-echo 'exit('$?')'
+exit $?
 cd ../..
